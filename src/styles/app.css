@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Valorant Color Palette */
+  --color-val-red: #FF4655;
+  --color-val-dark-red: #BD3944;
+  --color-val-bg-primary: #0F1923;
+  --color-val-bg-secondary: #1A242E;
+  --color-val-bg-tertiary: #253340;
+  --color-val-text-primary: #ECE8E1;
+  --color-val-text-secondary: #8B978F;
+  --color-val-text-muted: #5A6B5E;
+  --color-val-accent: #FF4655;
+  --color-val-accent-hover: #E63E4C;
+  --color-val-border: #2A3A44;
+  --color-val-success: #34D399;
+  --color-val-warning: #FBBF24;
+  --color-val-error: #EF4444;
+
+  /* Font Families */
+  --font-heading: 'Tungsten Bold', 'Impact', sans-serif;
+  --font-ui: 'DIN Next', 'Arial', sans-serif;
+  --font-body: 'Montserrat', 'Helvetica Neue', sans-serif;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+}
+
+/* Base Styles */
+html {
+  background-color: var(--color-val-bg-primary);
+  color: var(--color-val-text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Heading Utility */
+.font-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Valorant-style angular clip path utility */
+.clip-angular {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-val-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-val-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-val-text-muted);
+}
